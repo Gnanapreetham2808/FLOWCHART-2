@@ -1,0 +1,67 @@
+def get_user_input(prompt):
+    while True:
+        user_input = input(f"{prompt} (yes/no): ").lower()
+        if user_input == "yes":
+            return True
+        elif user_input == "no":
+            return False
+        else:
+            print("Please enter 'yes' or 'no'.")
+
+def main():
+    is_nri = get_user_input("Are you an NRI?")
+    is_resident_of_ap = get_user_input("Are you a resident of Andhra Pradesh?")
+    satisfied_with_course_or_campus = get_user_input("Are you satisfied with the choice of course or campus?")
+    wish_to_reside_in_campus = get_user_input("Do you wish to reside on campus?")
+    want_vitap_bus_service = get_user_input("Do you want to use VITAP Bus Service?")
+
+
+    print("START")
+
+
+    print("ADMISSIONS")
+
+    if is_nri:
+
+        print("THROUGH NRI QUOTA")
+    elif is_resident_of_ap:
+
+        print("WRITE EAPCET")
+    else:
+
+        print("WRITE VITEEE")
+
+
+    print("FILL IN CHOICE OF COURSE AND CAMPUS")
+
+
+    print("WAIT FOR COUNSELING")
+
+    if satisfied_with_course_or_campus:
+
+        print("PAY ADVANCE FEE")
+    else:
+
+        print("RESEARCH OTHER INSTITUTES THAT SUIT YOUR PREFERENCE")
+
+    if wish_to_reside_in_campus:
+
+        print("CHOOSE ROOM TYPE AND NUMBER OF ROOMMATES & PAY ADVANCE")
+
+        if want_vitap_bus_service:
+
+            print("BOOK AND PAY TRANSPORT FEE")
+
+
+        print("REPORT TO HOSTEL & SUBMIT DOCUMENTS")
+    else:
+
+        print("REPORT & SUBMIT REQUIRED DOCUMENTS")
+
+
+    print("MEET YOUR MENTOR")
+
+
+    print("END")
+
+main()
